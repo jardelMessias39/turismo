@@ -1,0 +1,11 @@
+/* Logo do Turismo */
+.logo-turismo {
+    max-width: 200px;
+}
+
+/* Imagem do local selecionado */
+.imagem-local {
+    display: none;
+    max-width: 400px;
+    margin-top: 20px;
+}

@@ -1,0 +1,53 @@
+
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./style.css">
+    <title>Turismo</title>
+</head>
+
+<body>
+    <img src="./turismo/images/logo-turismo.png" alt="Logo do Turismo" class="logo-turismo">
+    
+    <h1>Escolha o local</h1>
+    <label for="local">Selecione um local:</label>
+    <select id="local">
+        <option value="" selected disabled>Selecione...</option>
+        <option value="salvador">Salvador</option>
+        <option value="sergipe">Sergipe</option>
+        <option value="amazonas">Amazonas</option>
+        <option value="saopaulo">São Paulo</option>
+        <option value="riodejaneiro">Rio de Janeiro</option>
+        <option value="florianopolis">Florianópolis</option>
+        <option value="parana">Paraná</option>
+    </select>
+    <input type="button" name="Enviar" id="botao" value="Enviar">
+    <div id="imagem-container">
+        <img id="imagem" src="" alt="Imagem do local selecionado" class="imagem-local">
+    </div>
+    <script>
+        const imagens = {
+            salvador: 'turismo/images/salvador.jpg',
+            sergipe: 'turismo/images/sergipe.jpg',
+            amazonas: 'turismo/images/amazonas.jpg',
+            saopaulo: 'turismo/images/sao-paulo.jpg',
+            riodejaneiro: 'turismo/images/rio-de-janeiro.jpg',
+            parana: 'turismo/images/paraná.jpg',
+            florianopolis: 'turismo/images/florianopolis.jpg'
+        };
+        document.getElementById('botao').onclick = function () {
+            const local = document.getElementById('local').value;
+            const imgPath = imagens[local] || '';
+            const img = document.getElementById('imagem');
+            if (imgPath) {
+                img.src = imgPath;
+                img.style.display = 'block';
+            } else {
+                img.style.display = 'none';
+            }
+        };
+    </script>
+</body>
+
+</html>
