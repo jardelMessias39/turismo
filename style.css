@@ -3,7 +3,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   margin: 0;
   background: linear-gradient(to right, #e0f7fa, #fff);
-  color: #333;
+  color: #ad4e4e;
 }
 
 header {
@@ -76,4 +76,34 @@ footer {
 footer a {
   color: #00796b;
   text-decoration: none;
+}
+/* Regra para destacar o estado no mapa */
+.br-mapa svg [data-uf].destacado {
+  /*
+    Muda a cor de preenchimento (fill) do estado.
+    Você pode escolher qualquer cor. Aqui usei um azul vibrante.
+  */
+  fill: #007bff; /* Exemplo: Um tom de azul */
+  /*
+    Opcional: Garante que a transição de cor seja suave (se o plugin permitir).
+  */
+  transition: fill 0.3s ease;
+}
+
+/* Opcional: Adicionar uma borda ou sombra, se desejar */
+.br-mapa svg [data-uf].destacado {
+  stroke: #004085; /* Cor da borda */
+  stroke-width: 2px;
+}
+#br_mapa {
+  width: 80%;
+  max-width: 700px;
+  height: auto;
+  margin: 0 auto;
+}
+
+#br_mapa {
+  transform: scale(0.8);
+  transform-origin: top center;
+  margin-left: 10%;
 }
